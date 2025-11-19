@@ -1,11 +1,11 @@
 // Seleciona todo o texto do body do index.html
     const text = document.body.innerText; // ou use document.getElementById('seuElemento').innerText para um elemento específico
-    const words = text.trim().split(/\s+/);
+    const words = text.trim().split(/\s+/); // 
     const palavrasMaiusculas = words.filter(word => /^[A-ZÁÉÍÓÚÀÂÊÔÇ]{1}.*$/.test(word) && word.length > 3);
     const todasPalavras = words.length;
     const letrasMaiusculas = palavrasMaiusculas.length;
     const palavrasMinusculas = words.filter(word => /^[a-záéíóúàâêôç]{1}.*$/.test(word) && word.length > 3);
-    const letrasMinusculas = palavrasMinusculas.length;
+    const letrasMinusculas = palavrasMinusculas.length; 
 
     document.getElementById('letrasMaiusculas').innerText = `Quantidades de palavras com letra maiúscula: ${letrasMaiusculas}`;
     document.getElementById('palavrasMinusculas').innerText = `Quantidade de palavras com letras minusculas: ${letrasMinusculas}`;
