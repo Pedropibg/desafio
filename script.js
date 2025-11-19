@@ -18,6 +18,7 @@
     });
     const repetição = Object.entries(wordFrequency).sort((a, b) => b[1] - a[1]);
     document.getElementById('repetição').innerText = `Palavra mais repetida: "${repetição[0][0]}" (${repetição[0][1]} vezes)`;
+    document.getElementById('repetição3').innerText = `Palavra mais repetida acima de três caracteres: "${repetição.find(entry => entry[0].length > 3)[0]}" (${repetição.find(entry => entry[0].length > 3)[1]} vezes)`;
     document.getElementById('menosRepetição').innerText = `Palavra menos repetida: "${repetição[repetição.length - 1][0]}" (${repetição[repetição.length - 1][1]} vez)`;
     const maiorPalavra = words.reduce((a, b) => a.length >= b.length ? a : b, "");
     document.getElementById('maiorPalavra').innerText = `Maior palavra: "${maiorPalavra}" (${maiorPalavra.length} letras)`; 
