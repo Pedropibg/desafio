@@ -9,8 +9,8 @@
 
     document.getElementById('letrasMaiusculas').innerText = `Quantidades de palavras com letra maiúscula: ${letrasMaiusculas}`;
     document.getElementById('palavrasMinusculas').innerText = `Quantidade de palavras com letras minusculas: ${letrasMinusculas}`;
-    document.getElementById('vogais').innerText = `Quantidade de palavras que começam com vogais com até 3 caracteres: ${text.match(/\b[aeiouáéíóúàâêô]{1,3}\w*/gi)?.length || 0}`;
-    document.getElementById('consoantes').innerText = `Quantidade de palavras que começam consoantes com até 3 caracteres: ${text.match(/\b[b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]{1,3}\w*/gi)?.length || 0}`;
+    document.getElementById('vogais').innerText = `Quantidade de palavras que começam com vogais acima de 3 caracteres: ${text.match(/\b[aeiouáéíóúàâêô]{4,}\w*/gi)?.length || 0}`;
+    document.getElementById('consoantes').innerText = `Quantidade de palavras que começam consoantes acima de 3 caracteres: ${text.match(/\b[b-df-hj-np-tv-zç]{4,}\w*/gi)?.length || 0}`;
     const wordFrequency = {};
     words.forEach(word => {
         const lowerWord = word.toLowerCase();
